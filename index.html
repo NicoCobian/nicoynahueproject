@@ -20,16 +20,10 @@
 
 
 <div class="card bg-light">
-<article class="card-body mx-auto" style="max-width: 400px;">
+<article class="card-body mx-auto" style="max-width: 600px;">
+    <h4 id="hello_user" class="card-title mt-3 text-center"></h4>
 	<h4 class="card-title mt-3 text-center">Create Account</h4>
 	<p class="text-center">Get started with your free account</p>
-	<p>
-		<a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Login via Twitter</a>
-		<a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
-	</p>
-	<p class="divider-text">
-        <span class="bg-light">OR</span>
-    </p>
 	<form>
        <!-- EMAIL// -->
     <div class="form-group input-group">
@@ -73,11 +67,11 @@
 		</div>
         <input class="form-control" id="Password" placeholder="Create password" type="password">
     </div>
-    <button onclick="SubmitEvent" id="Registrar" class="btn btn-primary btn-block"> Create account  </button>
+    <input type="button" value="Create account" id="Registrar" class="btn btn-primary btn-block">
 
     </div> <!-- form-group// -->                                      
     <div class="form-group">
-    </div> <!-- form-group// -->      
+    </div> <!-- form-group// -->   
     <p class="text-center">Have an account? <a href="login.html">Log In</a> </p>                                                                 
 </form>
 </article>
@@ -88,32 +82,6 @@
 
 <br><br>
 
-<script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyC6MuGaBatAshpNzNRVpNG2ZVoTDP0BGyQ",
-      authDomain: "login-e-password.firebaseapp.com",
-      projectId: "login-e-password",
-      storageBucket: "login-e-password.appspot.com",
-      messagingSenderId: "976144367089",
-      appId: "1:976144367089:web:dca67744273d922c565850",
-      measurementId: "G-TGE42YHS3B"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-  </script>
-<script src="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.js"></script>
-<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.0/firebase-ui-auth.css" />
-
-<script type="text/javascript" src="loginpassword.js"></script>
+<script type="module" src="register.js"></script>
 </body>
 </html>
