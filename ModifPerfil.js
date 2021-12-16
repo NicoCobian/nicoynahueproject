@@ -97,6 +97,7 @@ $("#logOut").click(function () {
 });
 
 function logOut() {
+  window.localStorage.removeItem("userId");
   const auth = getAuth();
   signOut(auth)
     .then(() => {

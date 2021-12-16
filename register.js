@@ -98,12 +98,10 @@ function storeUserData(
 }
 
 $(document).ready(function () {
-  onAuthStateChanged(getAuth(), (user) => {
-    if (user) {
-      // User is signed in
-      window.location = "ModifPerfil.html";
-    }
-  });
+  let userId = window.localStorage.getItem("userId");
+  if (userId != null) {
+    window.location = "ModifPerfil.html";
+  }
 });
 
 /*
