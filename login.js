@@ -2,6 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase
 import {
   getAuth,
   signInWithEmailAndPassword,
+  onAuthStateChanged,
 } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js";
 
 const firebaseConfig = {
@@ -33,8 +34,8 @@ $("#login").click(function () {
         const user = userCredential.user;
         console.log(user);
         window.localStorage.setItem("user", user);
-
         // REDIRIGIR A OTRA PAGINA HTML
+        window.location = "ModifPerfil.html";
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -46,6 +47,10 @@ $("#login").click(function () {
 });
 
 $(document).ready(function () {
-  let user = window.localStorage.getItem("user");
-  console.log(user.email);
+  onAuthStateChanged(getAuth(), (user) => {
+    if (user) {
+      // User is signed in
+      window.location = "ModifPerfil.html";
+    }
+  });
 });
