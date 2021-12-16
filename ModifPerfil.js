@@ -76,14 +76,14 @@ $("#saveProfileData").click(function () {
     luogoNasc: LuogodiNascita,
   }).then(function () {
     if (Password == "") {
-      alert("Datos modificados con éxito.");
+      alert("changes made successfully.");
     } else {
       const auth = getAuth();
       const user = auth.currentUser;
       updatePassword(user, Password)
         .then(() => {
           // Update successful.
-          alert("Datos modificados con éxito.");
+          alert("changes made successfully.");
         })
         .catch((error) => {
           alert(error.message);
